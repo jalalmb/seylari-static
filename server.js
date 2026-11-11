@@ -19,8 +19,8 @@ function send(res, status, body, type = 'text/plain; charset=utf-8') {
 
 const server = http.createServer((req, res) => {
   const requestPath = decodeURIComponent((req.url || '/').split('?')[0]);
-  const relativePath = requestPath === '/manus-routes.json'
-    ? path.join('public', 'manus-routes.json')
+  const relativePath = requestPath === '/manus-routes.json' || requestPath.startsWith('/assets/')
+    ? path.join('public', requestPath.replace(/^\/+/, ''))
     : requestPath === '/' ? 'index.html' : requestPath.replace(/^\/+/, '');
   const filePath = path.resolve(root, relativePath);
 

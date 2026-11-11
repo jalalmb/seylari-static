@@ -52,7 +52,7 @@ body {
 .message-panel::before {
   inset: 0;
   opacity: 0.28;
-  background-image: url('/manus-storage/SEYLARI_Aged_Gold_Foil_Reference_enhanced_ffcd995b.png');
+  background-image: url('/assets/SEYLARI_Aged_Gold_Foil_Reference_enhanced.png');
   background-size: 720px auto;
   background-position: 52% 34%;
   mix-blend-mode: multiply;
